@@ -53,7 +53,7 @@ function App() {
             }}
           >
             <img src={obj.flag} alt={obj.name} style={{ width: "100px" }} />
-            <h2>{obj.name}</h2>
+            <p>{obj.name}</p>
           </div>
         ))}
       </div>
