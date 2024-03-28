@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 
 function App() {
+  const [data , setData] = useState([])
   const [filteredData, setFilteredData] = useState([]);
 
   useEffect(() => {
@@ -16,6 +17,7 @@ function App() {
           name: country.name.common,
           flag: country.flags.svg,
         }));
+        setData(formattedData)
         setFilteredData(formattedData);
       } catch (error) {
         console.error("Error fetching data:", error);
