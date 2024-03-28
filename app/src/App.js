@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 
 function App() {
-  const [data, setData] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
 
   useEffect(() => {
@@ -17,7 +16,6 @@ function App() {
           name: country.name.common,
           flag: country.flags.svg,
         }));
-        setData(formattedData);
         setFilteredData(formattedData);
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -43,6 +41,7 @@ function App() {
       >
         {filteredData.map((obj) => (
           <div
+          className="countryCard"
             style={{
               display: "flex",
               flexDirection: "column",
@@ -54,7 +53,7 @@ function App() {
             }}
           >
             <img src={obj.flag} alt={obj.name} style={{ width: "100px" }} />
-            <h6>{obj.name}</h6>
+            <h2>{obj.name}</h2>
           </div>
         ))}
       </div>
