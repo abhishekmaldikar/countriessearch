@@ -49,7 +49,7 @@ function App() {
               alignItems: "center",
               padding: "8px",
               border: "0.5px solid grey",
-              borderRadius: "2px",
+              borderRadius: "4px",
             }}
           >
             <img src={obj.flag} alt={obj.name} style={{ width: "100px" }} />
